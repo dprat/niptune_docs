@@ -6,9 +6,88 @@
 Welcome to NiPTUNE's documentation!
 ===================================
 
+NiPTUNE is a python library giving tools to analyse NIPT data.
+This library has been developed in python3.
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+
+Get started
+===================================
+
+Each module can be used as a python stand alone.
+
+
+
+
+Installation
+===================================
+
+
+
+
+Dependencies
+===================================
+
+* python 3.7:
+
+   •	matplotlib 3.3.2
+   •	numpy 1.19.2
+   •	pandas 1.1.3
+   •	pysam 0.16.0.1
+   •	statsmodels 0.12.0
+   •	scikit-learn 0.23.2
+
+* R 3.5.2:
+
+   •	ggfortify 0.4.11
+   •	ggplot2 3.3.2
+   •	DNAcopy 1.62.0
+   •	Rsamtools 2.4.0
+
+
+
+Configuration File
+===================================
+
+First you need to set the configuration file.
+This file is already filled, we don't recommend to modify the parameters, exept for the parameter [folders][home]
+
+**Set path for NiPTUNE output**
+
+In section [folders] the parameter ``home`` is set to niptune_results by default.
+For every new analysis the user has to modify this parameter in order to not overwrite results already existing.
+
+
+
+**Subdirectories of NiPTUNE output:**
+
+* output_tables:
+ output_dir/tables here you will find the outputs of despina.py, proteus.py, halimede.py, laomedeida.py, neso.py, nereid.py, sao.py that have a tables format
+* output_triton:
+ output_dir/converted_files here you will find the converted files (.gcc, .pickle, .npz) from the module triton.py
+* output_proteus:
+ output_dir/PCA_plots here you will find the PCA plots  from the module proteus.py
+* output_proteus_bin:
+ output_dir/PCA_bins here you will find the distribution of reads count gc normalized by bin used as input fot PCA for the module proteus.py
+* output_halimede:
+ output_dir/gender_prediction here you will find the threshold estimated by the gaussian mixture model from the module halimede.py to separate female/male populations.
+* output_halimede_Yfrac:
+ output_dir/gender_prediction_MagicYcounts #here you will find the estimated MagicY counts for each sample.
+* output_larissa:
+ output_dir/reference here you will find the list of samples selected by larissa.py to be used as reference for defrag and WisecondorX
+* output_larissa_wisecondorX:
+ output_dir/reference/npz here you will find the npz files (symbolic link to the folder output_triton) correspondent to the samples selected by larissa.py to be used as reference for WisecondorX
+* output_larissa_defrag:
+ output_dir/reference/boydir & output_dir/reference/girldir here you will find the gcc and pickle files (symbolic link to the folder output_triton) correspondent to the samples selected by larissa.py to be used as reference for Defrag
+* output_nereid:
+ output_dir/read_len_dist here you will find the read length distribution for each sample
+* output_sao_data:
+ output_dir/copy_number_alteration_data here you will find the bin visualization plots and the additional files created by WisecondorX  through sao.py
+
+
+
 
 
 
@@ -30,7 +109,7 @@ For example see ``tests/data/list_bam_files.txt``
 
 Output: Files are stored in the directory ``converted_files``
 
-Arguments :
+Arguments::
 
 * -p, --binSizePickle, default=1Mb, to set the size of bins for gcc and pickle files
 * -n, --binSizeNpz, default=5Kb, to set the size of bins for npz files
@@ -58,7 +137,7 @@ For example see ``tests/data/list_prefix.txt``
 
 Output: one table with sample names and associated PCA plot. Results are stored in the directory ``tables`. All PCA plots are stored in the directory ``PCA_plots``. The distributions of reads count GC normalized by bin used as input for PCA for are stored in the directory ``PCA_bins``.
 
-Arguments:
+Arguments:::
 
 * -r, --routine, default = False, to choose whether you need to use PCA in routine. By default this option is set to False and compute a PCA of reference with all the cohort data.
 
@@ -70,9 +149,9 @@ This module implements the MagicY method for fetal gender prediction. It is base
 
 Input : A list in .txt format containing list of samples in bam format. Indicate the absolute path of files.
 
-Output: one table with sample names and associated gender predicted (M/F). Results are stored in the directory ``tables``. In its first application, MagicY needs to estimate a threshold to separate female and male population using a **gaussian mixture model**. This threshold is stored in the directory ``gender_prediction``. In routine NIPT, you do not need to re-estimate this threshold, thus the only output will be the table stored in the directory ``tables``. The estimated MagicY counts for each sample are stored in the directory ``gender_prediction_MagicYcounts``.
+Output: one table with sample names and associated gender predicted (M/F). Results are stored in the directory ``tables``. In its first application, MagicY needs to estimate a threshold to separate female and male population using a **gaussian mixture model**. This threshold is stored in the directory ``gender_prediction``. In routine NIPT, you do not need to re-estimate this threshold, thus the only output will be the table stored in the directory ``tables`. The estimated MagicY counts for each sample are stored in the directory ``gender_prediction_MagicYcounts``.
 
-Arguments:
+Arguments::
 
 * -s, --setThreshold, default = False, to choose whether you need to calculate the threshold or not.
 * -t, --thresholdValue, default = automatically uses the threshold estimated when the option s=True, to set a different threshold compared to the one estimated by the gaussian mixture model (in general you do not need to set this value, we suggest to use this option only for testing purposes).
@@ -86,7 +165,7 @@ Input: list of samples, only prefix file name (no path), previously converted in
 
 Output: list of samples selected as reference (stored in the directory reference), correspondent npz converted files (stored in the directory reference/npz), correspondent gcc and pickle converted files (stored in the directories reference/boydir and reference/girldir accordingly to sample gender).
 
-Arguments:
+Arguments::
 
 * -n, --numberSamples, default=100, to set the number of samples to create reference.
 * -b, --binSizeNpz, default=1Kb, to set the size of bins for npz conversion
@@ -103,7 +182,7 @@ Input: list of samples, only prefix file name (no path); reference will be autom
 
 Output: one table with sample names and associated ff estimated by Defrag a method. Results are stored in the ``directory tables``.
 
-Arguments:
+Arguments::
 
 * -g, --GCcorrection, default=True, to set whether to apply GC correction before Defrag calculation.
 
@@ -129,7 +208,7 @@ Input : A list in .txt format containing list of samples in bam format. Indicate
 
 Output: one table with sample names and associated e values for chr18 and chr21 each for ff estimated by Defrag a or Seqff method. Results are stored in the directory ``tables``. Read length distribution are stored in directory ``read_len_dist``.
 
-Arguments:
+Arguments::
 
 * -r18, --fetalRange_chr18, default=“121:165”, to set the range of reads length to be considered as most likely fetal for chr18
 * -r21, --fetalRange_chr21, default==“109:164”, to set the range of reads length to be considered as most likely fetal for chr18
@@ -159,4 +238,4 @@ Output: A table in which each sample (line) is described by the following column
 
 Arguments: none
 
-.
+
