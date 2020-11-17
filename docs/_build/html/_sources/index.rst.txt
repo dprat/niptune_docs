@@ -63,28 +63,60 @@ For every new analysis the user has to modify this parameter in order to not ove
 
 **Subdirectories of NiPTUNE output:**
 
-* output_tables:
- output_dir/tables here you will find the outputs of despina.py, proteus.py, halimede.py, laomedeida.py, neso.py, nereid.py, sao.py that have a tables format
-* output_triton:
- output_dir/converted_files here you will find the converted files (.gcc, .pickle, .npz) from the module triton.py
-* output_proteus:
- output_dir/PCA_plots here you will find the PCA plots  from the module proteus.py
-* output_proteus_bin:
- output_dir/PCA_bins here you will find the distribution of reads count gc normalized by bin used as input fot PCA for the module proteus.py
-* output_halimede:
- output_dir/gender_prediction here you will find the threshold estimated by the gaussian mixture model from the module halimede.py to separate female/male populations.
-* output_halimede_Yfrac:
- output_dir/gender_prediction_MagicYcounts #here you will find the estimated MagicY counts for each sample.
-* output_larissa:
- output_dir/reference here you will find the list of samples selected by larissa.py to be used as reference for defrag and WisecondorX
-* output_larissa_wisecondorX:
- output_dir/reference/npz here you will find the npz files (symbolic link to the folder output_triton) correspondent to the samples selected by larissa.py to be used as reference for WisecondorX
-* output_larissa_defrag:
- output_dir/reference/boydir & output_dir/reference/girldir here you will find the gcc and pickle files (symbolic link to the folder output_triton) correspondent to the samples selected by larissa.py to be used as reference for Defrag
-* output_nereid:
- output_dir/read_len_dist here you will find the read length distribution for each sample
-* output_sao_data:
- output_dir/copy_number_alteration_data here you will find the bin visualization plots and the additional files created by WisecondorX  through sao.py
+* output_tables::
+
+   output_dir/tables
+ here you will find the outputs of despina.py, proteus.py, halimede.py, laomedeida.py, neso.py, nereid.py, sao.py that have a tables format
+
+* output_triton::
+
+   output_dir/converted_files
+  here you will find the converted files (.gcc, .pickle, .npz) from the module triton.py
+
+* output_proteus::
+
+   output_dir/PCA_plots
+  here you will find the PCA plots  from the module proteus.py
+
+* output_proteus_bin::
+
+   output_dir/PCA_bins
+  here you will find the distribution of reads count gc normalized by bin used as input fot PCA for the module proteus.py
+
+* output_halimede::
+
+   output_dir/gender_prediction
+  here you will find the threshold estimated by the gaussian mixture model from the module halimede.py to separate female/male populations.
+
+* output_halimede_Yfrac::
+
+   output_dir/gender_prediction_MagicYcounts
+  here you will find the estimated MagicY counts for each sample.
+
+* output_larissa::
+
+   output_dir/reference
+  here you will find the list of samples selected by larissa.py to be used as reference for defrag and WisecondorX
+
+* output_larissa_wisecondorX::
+
+   output_dir/reference/npz
+  here you will find the npz files (symbolic link to the folder output_triton) correspondent to the samples selected by larissa.py to be used as reference for WisecondorX
+
+* output_larissa_defrag::
+
+   output_dir/reference/boydir & output_dir/reference/girldir
+  here you will find the gcc and pickle files (symbolic link to the folder output_triton) correspondent to the samples selected by larissa.py to be used as reference for Defrag
+
+* output_nereid::
+
+   output_dir/read_len_dist
+  here you will find the read length distribution for each sample
+
+* output_sao_data::
+
+   output_dir/copy_number_alteration_data
+  here you will find the bin visualization plots and the additional files created by WisecondorX  through sao.py.
 
 
 
@@ -111,8 +143,8 @@ Output: Files are stored in the directory ``converted_files``
 
 Arguments::
 
-* -p, --binSizePickle, default=1Mb, to set the size of bins for gcc and pickle files
-* -n, --binSizeNpz, default=5Kb, to set the size of bins for npz files
+ -p, --binSizePickle, default=1Mb, to set the size of bins for gcc and pickle files
+ -n, --binSizeNpz, default=5Kb, to set the size of bins for npz files
 
 Despina
 ==================
@@ -139,7 +171,7 @@ Output: one table with sample names and associated PCA plot. Results are stored 
 
 Arguments:::
 
-* -r, --routine, default = False, to choose whether you need to use PCA in routine. By default this option is set to False and compute a PCA of reference with all the cohort data.
+ -r, --routine, default = False, to choose whether you need to use PCA in routine. By default this option is set to False and compute a PCA of reference with all the cohort data.
 
 Halimede
 ==================
@@ -153,8 +185,8 @@ Output: one table with sample names and associated gender predicted (M/F). Resul
 
 Arguments::
 
-* -s, --setThreshold, default = False, to choose whether you need to calculate the threshold or not.
-* -t, --thresholdValue, default = automatically uses the threshold estimated when the option s=True, to set a different threshold compared to the one estimated by the gaussian mixture model (in general you do not need to set this value, we suggest to use this option only for testing purposes).
+ -s, --setThreshold, default = False, to choose whether you need to calculate the threshold or not.
+ -t, --thresholdValue, default = automatically uses the threshold estimated when the option s=True, to set a different threshold compared to the one estimated by the gaussian mixture model (in general you do not need to set this value, we suggest to use this option only for testing purposes).
 
 
 Larissa
@@ -167,9 +199,9 @@ Output: list of samples selected as reference (stored in the directory reference
 
 Arguments::
 
-* -n, --numberSamples, default=100, to set the number of samples to create reference.
-* -b, --binSizeNpz, default=1Kb, to set the size of bins for npz conversion
-* -c, --cpus, default=1, to set the number of threads to use
+ -n, --numberSamples, default=100, to set the number of samples to create reference.
+ -b, --binSizeNpz, default=1Kb, to set the size of bins for npz conversion
+ -c, --cpus, default=1, to set the number of threads to use
 
 
 Laomedeida
@@ -184,7 +216,7 @@ Output: one table with sample names and associated ff estimated by Defrag a meth
 
 Arguments::
 
-* -g, --GCcorrection, default=True, to set whether to apply GC correction before Defrag calculation.
+ -g, --GCcorrection, default=True, to set whether to apply GC correction before Defrag calculation.
 
 
 Neso
@@ -210,8 +242,8 @@ Output: one table with sample names and associated e values for chr18 and chr21 
 
 Arguments::
 
-* -r18, --fetalRange_chr18, default=“121:165”, to set the range of reads length to be considered as most likely fetal for chr18
-* -r21, --fetalRange_chr21, default==“109:164”, to set the range of reads length to be considered as most likely fetal for chr18
+ -r18, --fetalRange_chr18, default=“121:165”, to set the range of reads length to be considered as most likely fetal for chr18
+ -r21, --fetalRange_chr21, default==“109:164”, to set the range of reads length to be considered as most likely fetal for chr18
 
 
 Sao
