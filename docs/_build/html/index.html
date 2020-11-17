@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to NiPTUNE’s documentation! &mdash; NiPTUNE  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home" alt="Documentation Home"> NiPTUNE
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Welcome to NiPTUNE’s documentation!</a></li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#triton">Triton</a></li>
+<li><a class="reference internal" href="#despina">Despina</a></li>
+<li><a class="reference internal" href="#proteus">Proteus</a></li>
+<li><a class="reference internal" href="#halimede">Halimede</a></li>
+<li><a class="reference internal" href="#larissa">Larissa</a></li>
+<li><a class="reference internal" href="#laomedeida">Laomedeida</a></li>
+<li><a class="reference internal" href="#neso">Neso</a></li>
+<li><a class="reference internal" href="#nereid">Nereid</a></li>
+<li><a class="reference internal" href="#sao">Sao</a></li>
+<li><a class="reference internal" href="#thalassa">Thalassa</a></li>
+</ul>
+</div>
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">NiPTUNE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Welcome to NiPTUNE’s documentation!</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-niptune-s-documentation">
+<h1>Welcome to NiPTUNE’s documentation!<a class="headerlink" href="#welcome-to-niptune-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="triton">
+<h1>Triton<a class="headerlink" href="#triton" title="Permalink to this headline">¶</a></h1>
+<p>A package allowing to convert file from .bam format to other formats (.gcc, .pickle, .npz) which serve as input for downstream processing in NiPTUNE.
+.gcc, .pickle and .npz are binned files.</p>
+<p>Input: A list in .txt format containing list of samples in bam format. Indicate the absolute path of files.</p>
+<p>For example see <code class="docutils literal notranslate"><span class="pre">tests/data/list_bam_files.txt</span></code></p>
+<p>Output: Files are stored in the directory <code class="docutils literal notranslate"><span class="pre">converted_files</span></code></p>
+<p>Arguments :</p>
+<ul class="simple">
+<li><p>-p, –binSizePickle, default=1Mb, to set the size of bins for gcc and pickle files</p></li>
+<li><p>-n, –binSizeNpz, default=5Kb, to set the size of bins for npz files</p></li>
+</ul>
+</div>
+<div class="section" id="despina">
+<h1>Despina<a class="headerlink" href="#despina" title="Permalink to this headline">¶</a></h1>
+<p>This module calculates the sequencing depth (sd) of the sample(s) provided.</p>
+<p>Input : A list in .txt format containing list of samples in bam format. Indicate the absolute path of files.</p>
+<p>For example see <code class="docutils literal notranslate"><span class="pre">tests/data/list_bam_files.txt</span></code></p>
+<p>Output: one table with sample names and associated sd. Results are stored in the directory <code class="docutils literal notranslate"><span class="pre">tables</span></code></p>
+<p>Arguments: none</p>
+</div>
+<div class="section" id="proteus">
+<h1>Proteus<a class="headerlink" href="#proteus" title="Permalink to this headline">¶</a></h1>
+<p>Principal component analysis. This module performs a principal component analysis on all the samples provided and produce a visual output to check whether there are outlier samples or subpopulations into the cohort.</p>
+<p>Input: list of samples, only prefix file name (no path), previously converted in gcc format.</p>
+<p>For example see <code class="docutils literal notranslate"><span class="pre">tests/data/list_prefix.txt</span></code></p>
+<p>Output: one table with sample names and associated PCA plot. Results are stored in the directory <code class="docutils literal notranslate"><span class="pre">tables`.</span> <span class="pre">All</span> <span class="pre">PCA</span> <span class="pre">plots</span> <span class="pre">are</span> <span class="pre">stored</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">directory</span> <span class="pre">``PCA_plots</span></code>. The distributions of reads count GC normalized by bin used as input for PCA for are stored in the directory <code class="docutils literal notranslate"><span class="pre">PCA_bins</span></code>.</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li><p>-r, –routine, default = False, to choose whether you need to use PCA in routine. By default this option is set to False and compute a PCA of reference with all the cohort data.</p></li>
+</ul>
+</div>
+<div class="section" id="halimede">
+<h1>Halimede<a class="headerlink" href="#halimede" title="Permalink to this headline">¶</a></h1>
+<p>Fetal gender prediction with MagicY.</p>
+<p>This module implements the MagicY method for fetal gender prediction. It is based on the quantification of reads in seven region on chrY and a gaussian mixture model to separate female and male population.</p>
+<p>Input : A list in .txt format containing list of samples in bam format. Indicate the absolute path of files.</p>
+<p>Output: one table with sample names and associated gender predicted (M/F). Results are stored in the directory <code class="docutils literal notranslate"><span class="pre">tables</span></code>. In its first application, MagicY needs to estimate a threshold to separate female and male population using a <strong>gaussian mixture model</strong>. This threshold is stored in the directory <code class="docutils literal notranslate"><span class="pre">gender_prediction</span></code>. In routine NIPT, you do not need to re-estimate this threshold, thus the only output will be the table stored in the directory <code class="docutils literal notranslate"><span class="pre">tables</span></code>. The estimated MagicY counts for each sample are stored in the directory <code class="docutils literal notranslate"><span class="pre">gender_prediction_MagicYcounts</span></code>.</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li><p>-s, –setThreshold, default = False, to choose whether you need to calculate the threshold or not.</p></li>
+<li><p>-t, –thresholdValue, default = automatically uses the threshold estimated when the option s=True, to set a different threshold compared to the one estimated by the gaussian mixture model (in general you do not need to set this value, we suggest to use this option only for testing purposes).</p></li>
+</ul>
+</div>
+<div class="section" id="larissa">
+<h1>Larissa<a class="headerlink" href="#larissa" title="Permalink to this headline">¶</a></h1>
+<p>References creation for Defrag and WisecondorX. This module randomly selects n samples to be used as reference for Defrag and WisecondorX while keeping the gender ratio stable.</p>
+<p>Input: list of samples, only prefix file name (no path), previously converted in gcc, pickle, npz formats and with gender predicted by MagicY</p>
+<p>Output: list of samples selected as reference (stored in the directory reference), correspondent npz converted files (stored in the directory reference/npz), correspondent gcc and pickle converted files (stored in the directories reference/boydir and reference/girldir accordingly to sample gender).</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li><p>-n, –numberSamples, default=100, to set the number of samples to create reference.</p></li>
+<li><p>-b, –binSizeNpz, default=1Kb, to set the size of bins for npz conversion</p></li>
+<li><p>-c, –cpus, default=1, to set the number of threads to use</p></li>
+</ul>
+</div>
+<div class="section" id="laomedeida">
+<h1>Laomedeida<a class="headerlink" href="#laomedeida" title="Permalink to this headline">¶</a></h1>
+<p>ff estimation with Defrag a.</p>
+<p>The main code of Defrag is maintained.</p>
+<p>Input: list of samples, only prefix file name (no path); reference will be automatically found in reference/boydir and reference/girldir as determined by larissa.py.</p>
+<p>Output: one table with sample names and associated ff estimated by Defrag a method. Results are stored in the <code class="docutils literal notranslate"><span class="pre">directory</span> <span class="pre">tables</span></code>.</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li><p>-g, –GCcorrection, default=True, to set whether to apply GC correction before Defrag calculation.</p></li>
+</ul>
+</div>
+<div class="section" id="neso">
+<h1>Neso<a class="headerlink" href="#neso" title="Permalink to this headline">¶</a></h1>
+<p>ff estimation with Seqff</p>
+<p>Input: list of samples, only prefix file name (no path)</p>
+<p>Output: one table with sample names and associated ff estimated by Seqff method. Results are stored in the <code class="docutils literal notranslate"><span class="pre">directory</span> <span class="pre">tables</span></code>.</p>
+<p>Arguments: none</p>
+</div>
+<div class="section" id="nereid">
+<h1>Nereid<a class="headerlink" href="#nereid" title="Permalink to this headline">¶</a></h1>
+<p>Epsilon value estimation</p>
+<p>Input : A list in .txt format containing list of samples in bam format. Indicate the absolute path of files.</p>
+<p>Output: one table with sample names and associated e values for chr18 and chr21 each for ff estimated by Defrag a or Seqff method. Results are stored in the directory <code class="docutils literal notranslate"><span class="pre">tables</span></code>. Read length distribution are stored in directory <code class="docutils literal notranslate"><span class="pre">read_len_dist</span></code>.</p>
+<p>Arguments:</p>
+<ul class="simple">
+<li><p>-r18, –fetalRange_chr18, default=“121:165”, to set the range of reads length to be considered as most likely fetal for chr18</p></li>
+<li><p>-r21, –fetalRange_chr21, default==“109:164”, to set the range of reads length to be considered as most likely fetal for chr18</p></li>
+</ul>
+</div>
+<div class="section" id="sao">
+<h1>Sao<a class="headerlink" href="#sao" title="Permalink to this headline">¶</a></h1>
+<p>Copy number alteration prediction with WisecondorX.</p>
+<p>Input list of samples, only prefix file name (no path). Reference files will be automatically found in <code class="docutils literal notranslate"><span class="pre">reference/npz</span></code> as determined by <code class="docutils literal notranslate"><span class="pre">larissa.py</span></code>.</p>
+<p>Output: one table with sample names and associated Z-score for all chromosomes estimated by WisecondorX method. Results are stored in the directory <code class="docutils literal notranslate"><span class="pre">tables</span></code>. Bin visualization and additional outputs by WisecondorX are stored in the directory <cite>copy_number_alteration_data`</cite>.</p>
+<p>Arguments: none</p>
+</div>
+<div class="section" id="thalassa">
+<h1>Thalassa<a class="headerlink" href="#thalassa" title="Permalink to this headline">¶</a></h1>
+<p>Output preparation.</p>
+<p>It collects results from upstream modules in a table.</p>
+<p>Input: Automatically finds all tables stored in the directory <code class="docutils literal notranslate"><span class="pre">tables</span></code>.</p>
+<p>Output: A table in which each sample (line) is described by the following columns: quality control (visual output), sd, gender prediction (magicY), ff (2 columns one for each method), e value for chr18 (2 columns one for each ff method), e value for chr21 (2 columns one for each ff method),  and the Z-score for chromosome 13, 18 and 21.</p>
+<p>Arguments: none</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, David Pratella
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
