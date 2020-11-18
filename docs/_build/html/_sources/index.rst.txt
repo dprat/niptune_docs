@@ -23,6 +23,7 @@ Each module can be used as a python stand alone.
 
 Installation
 ===================================
+pip install -i https://test.pypi.org/simple/ NiPTUNE
 
 
 
@@ -119,16 +120,79 @@ For every new analysis the user has to modify this parameter in order to not ove
   here you will find the bin visualization plots and the additional files created by WisecondorX  through sao.py.
 
 
+How to use NiPTUNE
+===================================
+
+First of all you need to create your configuration file in an empty directory.
+
+Once it's done go in directory where you created this file.
+Then from here you can launch every NiPTUNE stand alone.
+
+You can use NiPTUNE in 2 different ways : reference mode and routine mode.
+
+If it's the first time you are using NiPTUNE you need to create references for several tools:
+ - proteus
+ - halimede
+ - laomedeida
+ - sao
+
+For the others tools there is no need of reference.
 
 
+Usage example:
+
+•	Triton::
+
+ triton list_of_files.txt
+
+•	Despina::
+
+ despina list_of_files.txt
+
+•	Proteus:
+To create a reference::
+
+ proteus list_of_prefix.txt
+
+In routine ::
+
+ proteus -r list_of_prefix.txt
+
+•	Halimede:
+To create a threshold of reference::
+
+ halimede -s list_of_files.txt
+
+In routine ::
+
+ halimede list_of_files.txt
 
 
-Indices and tables
-==================
+•	Larissa::
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+ larissa list_of_files.txt
+
+•	Neso::
+
+ neso list_of_files.txt
+
+•	Laomedeida::
+
+ laomedeida list_of_prefix.txt
+
+•	Sao::
+
+ sao list_of_prefix.txt
+
+•	Nereid::
+
+ nereid list_of_files.txt
+
+•	Thalassa::
+
+ thalassa
+
+
 
 Triton
 ==================

@@ -87,7 +87,7 @@
 <li><a class="reference internal" href="#installation">Installation</a></li>
 <li><a class="reference internal" href="#dependencies">Dependencies</a></li>
 <li><a class="reference internal" href="#configuration-file">Configuration File</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#how-to-use-niptune">How to use NiPTUNE</a></li>
 <li><a class="reference internal" href="#triton">Triton</a></li>
 <li><a class="reference internal" href="#despina">Despina</a></li>
 <li><a class="reference internal" href="#proteus">Proteus</a></li>
@@ -176,6 +176,7 @@ This library has been developed in python3.</p>
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<p>pip install -i <a class="reference external" href="https://test.pypi.org/simple/">https://test.pypi.org/simple/</a> NiPTUNE</p>
 </div>
 <div class="section" id="dependencies">
 <h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
@@ -285,13 +286,93 @@ For every new analysis the user has to modify this parameter in order to not ove
 </li>
 </ul>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+<div class="section" id="how-to-use-niptune">
+<h1>How to use NiPTUNE<a class="headerlink" href="#how-to-use-niptune" title="Permalink to this headline">¶</a></h1>
+<p>First of all you need to create your configuration file in an empty directory.</p>
+<p>Once it’s done go in directory where you created this file.
+Then from here you can launch every NiPTUNE stand alone.</p>
+<p>You can use NiPTUNE in 2 different ways : reference mode and routine mode.</p>
+<dl class="simple">
+<dt>If it’s the first time you are using NiPTUNE you need to create references for several tools:</dt><dd><ul class="simple">
+<li><p>proteus</p></li>
+<li><p>halimede</p></li>
+<li><p>laomedeida</p></li>
+<li><p>sao</p></li>
 </ul>
+</dd>
+</dl>
+<p>For the others tools there is no need of reference.</p>
+<p>Usage example:</p>
+<ul class="simple">
+<li><p>Triton:</p></li>
+</ul>
+<blockquote>
+<div><p>triton list_of_files.txt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Despina:</p></li>
+</ul>
+<blockquote>
+<div><p>despina list_of_files.txt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Proteus:</p></li>
+</ul>
+<p>To create a reference:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proteus</span> <span class="n">list_of_prefix</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>In routine</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">proteus</span> <span class="o">-</span><span class="n">r</span> <span class="n">list_of_prefix</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Halimede:</p></li>
+</ul>
+<p>To create a threshold of reference:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">halimede</span> <span class="o">-</span><span class="n">s</span> <span class="n">list_of_files</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>In routine</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">halimede</span> <span class="n">list_of_files</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Larissa:</p></li>
+</ul>
+<blockquote>
+<div><p>larissa list_of_files.txt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Neso:</p></li>
+</ul>
+<blockquote>
+<div><p>neso list_of_files.txt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Laomedeida:</p></li>
+</ul>
+<blockquote>
+<div><p>laomedeida list_of_prefix.txt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Sao:</p></li>
+</ul>
+<blockquote>
+<div><p>sao list_of_prefix.txt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Nereid:</p></li>
+</ul>
+<blockquote>
+<div><p>nereid list_of_files.txt</p>
+</div></blockquote>
+<ul class="simple">
+<li><p>Thalassa:</p></li>
+</ul>
+<blockquote>
+<div><p>thalassa</p>
+</div></blockquote>
 </div>
 <div class="section" id="triton">
 <h1>Triton<a class="headerlink" href="#triton" title="Permalink to this headline">¶</a></h1>
