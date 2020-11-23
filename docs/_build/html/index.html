@@ -176,7 +176,11 @@ This library has been developed in python3.</p>
 </div>
 <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<p>pip install NiPTUNE</p>
+<blockquote>
+<div><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">NiPTUNE</span>
+</pre></div>
+</div>
+</div></blockquote>
 </div>
 <div class="section" id="dependencies">
 <h1>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline">¶</a></h1>
@@ -208,10 +212,23 @@ This library has been developed in python3.</p>
 <div class="section" id="configuration-file">
 <h1>Configuration File<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h1>
 <p>First you need to set the configuration file.
-This file is already filled, we don’t recommend to modify the parameters, exept for the parameter [folders][home]</p>
+You need to create a new directory where you will store all your results.</p>
+<blockquote>
+<div><p>By example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">niptune_results</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>Then you have to set this directory path in your file <cite>niptune.conf</cite> in the section <cite>[folders][home]</cite></p>
+<p>In addition to this directory the user has to set 2 others directories that will be used to store reference data and thus in routine mode.
+These directories are defined in section:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">proteus</span><span class="p">][</span><span class="n">reference_bins</span><span class="p">]</span>
+<span class="p">[</span><span class="n">halimede</span><span class="p">][</span><span class="n">gender_prediction</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>For the other sections, the niptune.conf file is already filled, we don’t recommend to modify the parameters (except for the one cited above).</p>
 <p><strong>Set path for NiPTUNE output</strong></p>
-<p>In section [folders] the parameter <code class="docutils literal notranslate"><span class="pre">home</span></code> is set to niptune_results by default.
-For every new analysis the user has to modify this parameter in order to not overwrite results already existing.</p>
+<p>Becareful that for every new analysis the user has to modify the parameter [folders][home] in order to not overwrite results already existing, but not the reference folders (cited above).</p>
 <p><strong>Subdirectories of NiPTUNE output:</strong></p>
 <ul>
 <li><p>output_tables:</p>
@@ -234,7 +251,7 @@ For every new analysis the user has to modify this parameter in order to not ove
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">output_dir</span><span class="o">/</span><span class="n">PCA_plots</span>
 </pre></div>
 </div>
-<p>here you will find the PCA plots  from the module proteus.py</p>
+<p>here you will find the PCA plots from the module proteus.py</p>
 </li>
 <li><p>output_proteus_bin:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">output_dir</span><span class="o">/</span><span class="n">PCA_bins</span>
@@ -288,8 +305,10 @@ For every new analysis the user has to modify this parameter in order to not ove
 </div>
 <div class="section" id="how-to-use-niptune">
 <h1>How to use NiPTUNE<a class="headerlink" href="#how-to-use-niptune" title="Permalink to this headline">¶</a></h1>
-<p>First of all you need to create your configuration file in an empty directory.</p>
-<p>Once it’s done go in directory where you created this file.
+<p>First step consist in setting your configuration file.
+You need to create a new directory where you will store all your results.
+Then you have to set this directory path in your file <cite>niptune.conf</cite> in the section <cite>[folders][home]</cite></p>
+<p>Once it’s done go in the directory where you created this file.
 Then from here you can launch every NiPTUNE stand alone.</p>
 <p>You can use NiPTUNE in 2 different ways : reference mode and routine mode.</p>
 <dl class="simple">
@@ -303,6 +322,7 @@ Then from here you can launch every NiPTUNE stand alone.</p>
 </dl>
 <p>For the others tools there is no need of reference.</p>
 <p>Usage example:</p>
+<p>You need to create a folder in which you will place</p>
 <ul>
 <li><p>Triton:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">triton</span> <span class="n">list_of_files</span><span class="o">.</span><span class="n">txt</span>

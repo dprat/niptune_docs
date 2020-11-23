@@ -23,7 +23,10 @@ Each module can be used as a python stand alone.
 
 Installation
 ===================================
-pip install NiPTUNE
+
+ ::
+
+   pip install NiPTUNE
 
 
 
@@ -53,12 +56,25 @@ Configuration File
 ===================================
 
 First you need to set the configuration file.
-This file is already filled, we don't recommend to modify the parameters, exept for the parameter [folders][home]
+You need to create a new directory where you will store all your results.
+
+ By example::
+
+   mkdir niptune_results
+
+Then you have to set this directory path in your file `niptune.conf` in the section `[folders][home]`
+
+In addition to this directory the user has to set 2 others directories that will be used to store reference data and thus in routine mode.
+These directories are defined in section::
+
+[proteus][reference_bins]
+[halimede][gender_prediction]
+
+For the other sections, the niptune.conf file is already filled, we don't recommend to modify the parameters (except for the one cited above).
 
 **Set path for NiPTUNE output**
 
-In section [folders] the parameter ``home`` is set to niptune_results by default.
-For every new analysis the user has to modify this parameter in order to not overwrite results already existing.
+Becareful that for every new analysis the user has to modify the parameter [folders][home] in order to not overwrite results already existing, but not the reference folders (cited above).
 
 
 
@@ -77,7 +93,7 @@ For every new analysis the user has to modify this parameter in order to not ove
 * output_proteus::
 
    output_dir/PCA_plots
-  here you will find the PCA plots  from the module proteus.py
+  here you will find the PCA plots from the module proteus.py
 
 * output_proteus_bin::
 
@@ -123,9 +139,11 @@ For every new analysis the user has to modify this parameter in order to not ove
 How to use NiPTUNE
 ===================================
 
-First of all you need to create your configuration file in an empty directory.
+First step consist in setting your configuration file.
+You need to create a new directory where you will store all your results.
+Then you have to set this directory path in your file `niptune.conf` in the section `[folders][home]`
 
-Once it's done go in directory where you created this file.
+Once it's done go in the directory where you created this file.
 Then from here you can launch every NiPTUNE stand alone.
 
 You can use NiPTUNE in 2 different ways : reference mode and routine mode.
@@ -140,6 +158,8 @@ For the others tools there is no need of reference.
 
 
 Usage example:
+
+You need to create a folder in which you will place
 
 * Triton::
 
