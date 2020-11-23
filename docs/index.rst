@@ -23,7 +23,7 @@ Each module can be used as a python stand alone.
 
 Installation
 ===================================
-pip install -i https://test.pypi.org/simple/ NiPTUNE
+pip install NiPTUNE
 
 
 
@@ -141,56 +141,56 @@ For the others tools there is no need of reference.
 
 Usage example:
 
-•	Triton::
+* Triton::
 
- triton list_of_files.txt
+   triton list_of_files.txt
 
-•	Despina::
+* Despina::
 
- despina list_of_files.txt
+   despina list_of_files.txt
 
-•	Proteus:
+* Proteus:
 To create a reference::
 
- proteus list_of_prefix.txt
+   proteus list_of_prefix.txt
 
-In routine ::
+In routine::
 
- proteus -r list_of_prefix.txt
+   proteus -r list_of_prefix.txt
 
-•	Halimede:
+* Halimede:
 To create a threshold of reference::
 
- halimede -s list_of_files.txt
+   halimede -s list_of_files.txt
 
 In routine ::
 
- halimede list_of_files.txt
+   halimede list_of_files.txt
 
 
-•	Larissa::
+* Larissa::
 
- larissa list_of_files.txt
+   larissa list_of_files.txt
 
-•	Neso::
+* Neso::
 
- neso list_of_files.txt
+   neso list_of_files.txt
 
-•	Laomedeida::
+* Laomedeida::
 
- laomedeida list_of_prefix.txt
+   laomedeida list_of_prefix.txt
 
-•	Sao::
+* Sao::
 
- sao list_of_prefix.txt
+   sao list_of_prefix.txt
 
-•	Nereid::
+* Nereid::
 
- nereid list_of_files.txt
+   nereid list_of_files.txt
 
-•	Thalassa::
+* Thalassa::
 
- thalassa
+   thalassa
 
 
 
