@@ -1,3 +1,5 @@
+TEST
+
 .. NiPTUNE documentation master file, created by
    sphinx-quickstart on Fri Nov 13 12:41:21 2020.
    You can adapt this file completely to your liking, but it should at least
@@ -55,8 +57,7 @@ Dependencies
 Configuration File
 ===================================
 
-First you need to set the configuration file.
-You need to create a new directory where you will store all your results.
+First you need to set the configuration file and to create a new directory where you will store all your results.
 
  By example::
 
